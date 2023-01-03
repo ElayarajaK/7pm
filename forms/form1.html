@@ -29,6 +29,8 @@
 -->
 <div>
     <form style="border: 2px solid green; width: 40%; text-align: center;">
+        
+        <input type="search" placeholder="Searching data">
         <h2>Employee Form Registration</h2>
         <div>
             <label for="name">Enter f_name : <small><b>*</b></small></label>
@@ -93,21 +95,145 @@
 
         <input type="time"/>
 
-
+      
    </div>
         <br/>
    <div>
     <label for="dob">Employee Salary range </label>
     <input type="range" min="0" step="30" value="5" max="1000"/>
 
-    
+    </div>
 
-    
-</div>
+    <div>
+        <label>Upload your images</label>
+        <input type="file" name="file_upload" id="imgs" />
 
-        <input type="submit"/>
+    </div>
+    <br/>
+
+    <div>
+        <label>select your distric</label>
+
+        <select>
+            <optgroup>
+            <h3>South Zone</h3>
+            <option value="vellore"> vellore</option>
+            <option value="coim">coibathur</option>
+            <option value="madura">Madura</option>
+            <option value="thiru">Thiruchi</option>
+            <option value="tnv">Thiruneveli</option>
+            <option value="kk">KK</option>
+        </optgroup>
+        <optgroup>
+           
+            <option> vellore</option>
+            <option>coibathur</option>
+            <option>Madura</option>
+            <option>Thiruchi</option>
+            <option>Thiruneveli</option>
+            <option>KK</option>
+        </optgroup>
+        </select>
+    </div>
+    <br/>
+    <div>
+        <label>select state</label>
+    <input type="text" placeholder="Select your state" list="open-list"/>
+    <datalist id="open-list">
+        <option>TamilNadu</option>
+        <option>Karnataka</option>
+        <option>Kerala</option>
+        <option>Panjab</option>
+        <option>Uthra pradesh</option>
+        <option>jammu</option>
+        <option>kasimir</option>
+        <option>Madhiya pradesh</option>
+
+    </datalist>
+    <br/>
+    </div>
+
+    <br/>
+        <div>
+            <label>some text</label>
+            <input type="hidden" name="personalData" value="wegot"/>
+        </div>
+
+        <input type="month"> <input type="week"/>
+
+        <input type="color" name="blue" value="red"/>
+        
+        <input type="submit"/> &nsim; <input type="reset">
+    
+    <details>
+        <summary>
+            What type Employe is this
+        </summary>
+        <p>
+            Lorem ipsum dolor,
+             sit amet consectetur adipisicing elit.
+              Mollitia officia modi, eveniet nostrum iste assumenda, facilis soluta commodi eaque quasi quia molestiae, voluptatibus
+             at tempore nulla velit odio error ad!
+        </p>
+    </details>
+
+    <details>
+        <summary>
+           pros-cons
+        </summary>
+        <p>
+            Lorem ipsum dolor,
+             sit amet consectetur adipisicing elit.
+              Mollitia officia modi, eveniet nostrum iste assumenda, facilis soluta commodi eaque quasi quia molestiae, voluptatibus
+             at tempore nulla velit odio error ad!
+        </p>
+    </details>
+
+    <details>
+        <summary>
+            What type Employe is this
+        </summary>
+        <p>
+            Lorem ipsum dolor,
+             sit amet consectetur adipisicing elit.
+              Mollitia officia modi, eveniet nostrum iste assumenda, facilis soluta commodi eaque quasi quia molestiae, voluptatibus
+             at tempore nulla velit odio error ad!
+        </p>
+    </details>
+
+    <progress value="10" max="100" id="progressing"> 10%</progress>
+
+
+
+
+
+
+
     </form>
 </div>
+
+<script>
+    let progress=document.getElementById("progressing");
+    console.log(progress)
+
+    let value=0;
+    fun(value);
+
+    function fun(value){
+        
+        if(value<10){
+            value++;
+
+            progress.value=value;
+        }
+
+        setTimeout(fun(value),500);
+
+        
+    }
+
+    
+</script>
 
     </body>
 </html>
